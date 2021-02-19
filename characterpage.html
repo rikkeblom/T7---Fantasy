@@ -10,21 +10,40 @@
       type="text/css"
       media="all"
     />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+    </style>
   </head>
 
   <body>
     <header>
-      <div class="wrapper">
-        <div class="navbar">
-          <div class="first"></div>
-          <div class="second"></div>
-          <div class="third"></div>
+      <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+
+      <!-- Top Navigation Menu -->
+      <section id="topnav">
+        <div class="topnav">
+          <a href="#home" class="active">Logo</a>
+          <!-- Navigation links (hidden by default) -->
+          <div id="myLinks">
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+          </div>
+          <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
         </div>
-      </div>
+      </section>
     </header>
 
     <article id="area_1">
-      <img src="elf-female.png" class="img-avatar" alt="avatar image" />
+      <img src="elf-girl-avatar" class="img-avatar" alt="avatar image" />
     </article>
 
     <article id="area_2">
