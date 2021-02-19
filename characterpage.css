@@ -29,7 +29,6 @@
   --heading-font: "Grenze Gotisch", cursive;
   --general-font: "Quicksand", sans-serif;
 }
-
 body {
   margin: 0;
   background-color: var(--background-color);
