@@ -1,0 +1,55 @@
+#area_1 {
+  grid-area: s1;
+}
+
+#area_2 {
+  grid-area: s2;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-family: serif;
+  font-size: 6vw;
+  margin-left: 2.5vw;
+  margin-top: 3vw;
+  margin-bottom: 0;
+}
+
+p {
+  font-family: sans-serif;
+  color: dimgrey;
+  font-size: 1em;
+  margin-left: 4vw;
+  margin-right: 4vw;
+}
+
+.img-avatar {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  object-fit: cover;
+  margin-left: 5rem;
+  margin-top: 5rem;
+}
+
+@media only screen and (min-width: 801px) {
+  body {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: " s1 s2 ";
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      " s1 "
+      " s2 ";
+  }
+}
