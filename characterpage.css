@@ -81,6 +81,7 @@ div[class*="container"] {
   justify-content: center;
   align-items: center;
   margin-top: 8vw;
+  margin-bottom: 9vw;
 }
 
 .btn {
@@ -91,10 +92,7 @@ div[class*="container"] {
   height: 64px;
   line-height: 64px;
   transition: all 0.3s;
-  span {
-    transition: all 0.3s;
-    tranform: scale(1, 1);
-  }
+  transform: scale(1, 1);
 }
 
 .btn::before,
@@ -191,4 +189,33 @@ div[class*="container"] {
       " s1 "
       " bn ";
   }
+}
+
+.nav-icon {
+  margin: 1em;
+  width: 40px;
+}
+
+.nav-icon:after,
+.nav-icon:before,
+.nav-icon div {
+  background-color: #fff;
+  border-radius: 1px;
+  content: "";
+  display: block;
+  height: 5px;
+  margin: 7px 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-icon:hover:before {
+  transform: translateY(12px) rotate(135deg);
+}
+
+.nav-icon:hover:after {
+  transform: translateY(-12px) rotate(-135deg);
+}
+
+.nav-icon:hover div {
+  transform: scale(0);
 }
