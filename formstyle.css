@@ -22,8 +22,9 @@ h1 {
   font-size: 3rem;
   text-transform: uppercase;
   color: #ffffff;
-  margin: 0%;
+  margin: 0;
   padding: 0;
+  margin-bottom: 1.75rem;
 }
 label {
   font-size: 1.25rem;
@@ -99,5 +100,8 @@ html {
   align-self: center;
 }
 .btn {
+  align-self: center;
+}
+.area2 {
   align-self: center;
 }
