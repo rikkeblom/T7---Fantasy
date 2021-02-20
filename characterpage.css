@@ -12,8 +12,6 @@
 
 #area_2 {
   grid-area: s2;
-  /* height: 400px;
-  width: 600px; */
   margin: auto;
   background-color: var(--color-4);
   box-shadow: 5px 5px 10px #000;
