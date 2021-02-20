@@ -2,7 +2,7 @@
   grid-area: hd;
 } */
 
-#topnav {
+#topnav_area {
   grid-area: tn;
 }
 
@@ -30,6 +30,12 @@
   --heading-font: "Grenze Gotisch", cursive;
   --general-font: "Quicksand", sans-serif;
 }
+
+main {
+  max-width: 300px;
+  margin: auto;
+}
+
 body {
   margin: 0;
   background-color: var(--background-color);
@@ -63,48 +69,6 @@ p {
   margin: auto;
 }
 
-/* Style the navigation menu */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
-}
-
-/* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
-  display: none;
-}
-
-/* Style navigation menu links */
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-}
-
-/* Style the hamburger menu */
-.topnav a.icon {
-  background: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-/* Add a grey background color on mouse-over */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Style the active link (or home/logo) */
-.active {
-  background-color: #4caf50;
-  color: white;
-}
-
 .col {
   height: 100%;
 }
@@ -116,6 +80,7 @@ div[class*="container"] {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 8vw;
 }
 
 .btn {
@@ -204,24 +169,26 @@ div[class*="container"] {
   margin-top: 8vw;
 }
 
-@media only screen and (min-width: 1001px) {
+@media only screen and (min-width: 1071px) {
   body {
     display: grid;
     grid-gap: 0px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       " tn tn "
-      " s1 s2 ";
+      " s1 s2 "
+      " s1 bn ";
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1070px) {
   body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
       " tn "
+      " s2 "
       " s1 "
-      " s2 ";
+      " bn ";
   }
 }
