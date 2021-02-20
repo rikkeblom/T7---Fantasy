@@ -12,6 +12,12 @@
 
 #area_2 {
   grid-area: s2;
+  /* height: 400px;
+  width: 600px; */
+  margin: auto;
+  background-color: var(--color-4);
+  box-shadow: 5px 5px 10px #000;
+  border-radius: 10px;
 }
 
 /* adelina css */
@@ -31,42 +37,48 @@
   --general-font: "Quicksand", sans-serif;
 }
 
+html {
+  background: url(formimg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 main {
   max-width: 300px;
   margin: auto;
 }
 
-body {
-  margin: 0;
-  background-color: var(--background-color);
-}
-
 h1 {
   font-family: var(--heading-font);
-  font-size: 3.2em;
+  font-size: 3rem;
   color: white;
   max-width: 500px;
-  margin: auto;
-  margin-top: 8vw;
+  margin-left: 4vw;
+  margin-right: 4vw;
+  margin-top: 2vw;
   margin-bottom: 4vw;
 }
 
 h2 {
   font-family: var(--general-font);
-  font-size: 1.5em;
+  font-size: 1em;
   color: white;
   max-width: 500px;
-  margin: auto;
+  margin-left: 4vw;
   margin-top: 1vw;
+  margin-right: 4vw;
   margin-bottom: 1vw;
 }
 
 p {
   font-family: var(--general-font);
   color: white;
-  font-size: 1.2em;
+  font-size: 0.9em;
   max-width: 500px;
-  margin: auto;
+  margin-left: 4vw;
+  margin-right: 4vw;
 }
 
 .col {
@@ -80,14 +92,15 @@ div[class*="container"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 8vw;
-  margin-bottom: 9vw;
+  margin-top: 2.5vw;
+  margin-bottom: 3vw;
 }
 
 .btn {
   position: relative;
   color: white;
   font-family: var(--general-font);
+  font-size: 0.8em;
   width: 256px;
   height: 64px;
   line-height: 64px;
@@ -162,7 +175,7 @@ div[class*="container"] {
   max-height: 100%;
   display: block;
   object-fit: cover;
-  max-width: 500px;
+  max-width: 450px;
   margin: auto;
   margin-top: 8vw;
 }
@@ -171,11 +184,10 @@ div[class*="container"] {
   body {
     display: grid;
     grid-gap: 0px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: .5fr 1fr;
     grid-template-areas:
       " tn tn "
-      " s1 s2 "
-      " s1 bn ";
+      " s1 s2 ";
   }
 }
 
@@ -185,9 +197,8 @@ div[class*="container"] {
     grid-template-columns: 1fr;
     grid-template-areas:
       " tn "
-      " s2 "
       " s1 "
-      " bn ";
+      " s2 ";
   }
 }
 
@@ -218,4 +229,29 @@ div[class*="container"] {
 
 .nav-icon:hover div {
   transform: scale(0);
+}
+
+.text-divider {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  font-size: 2rem;
+  --text-divider-gap: 1rem;
+}
+.text-divider::before,
+.text-divider::after {
+  content: "";
+  height: 3px;
+  background-color: #ffffff;
+  flex-grow: 1;
+}
+.text-divider::before {
+  margin-right: var(--text-divider-gap);
+  margin-left: var(--text-divider-gap);
+}
+.text-divider::after {
+  margin-left: var(--text-divider-gap);
+  margin-right: var(--text-divider-gap);
 }
