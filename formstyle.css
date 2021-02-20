@@ -11,6 +11,9 @@
   --heading-font: "Grenze Gotisch", cursive;
   --general-font: "Quicksand", sans-serif;
 }
+* {
+  box-sizing: border-box;
+}
 .maingrid {
   display: grid;
   grid-gap: 2rem;
@@ -31,13 +34,54 @@ label {
   font-family: var(--general-font);
   color: #ffffff;
 }
-button {
-  font-family: var(--general-font);
-  text-transform: uppercase;
-  background-color: var(--color-3);
+a {
+  text-decoration: none;
   color: #ffffff;
+  font-family: var(--general-font);
+}
+.button {
+  display: inline-flex;
   height: 50px;
   width: 150px;
+  border: 2px solid #475957;
+  margin: 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#button-5 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#button-5 a {
+  position: relative;
+  transition: all 0.45s ease-Out;
+}
+
+#translate {
+  transform: rotate(50deg);
+  width: 150%;
+  height: 200%;
+  left: -200px;
+  top: -30px;
+  background: #475957;
+  position: absolute;
+  transition: all 0.3s ease-Out;
+}
+
+#button-5:hover #translate {
+  left: 0;
+}
+
+#button-5:hover a {
+  color: #ffffff;
 }
 img {
   height: auto;
@@ -50,7 +94,7 @@ img {
   height: 400px;
   width: 600px;
   margin: auto;
-  background-color: var(--color-4);
+  background-color: #333333;
   box-shadow: 5px 5px 10px #000;
   border-radius: 10px;
 }
@@ -71,7 +115,7 @@ img {
   font-family: var(--heading-font);
   text-transform: uppercase;
   font-size: 2rem;
-  --text-divider-gap: 1rem;
+  --text-divider-gap: 2rem;
 }
 .text-divider::before,
 .text-divider::after {
@@ -83,11 +127,15 @@ img {
 .text-divider::before {
   margin-right: var(--text-divider-gap);
   margin-left: var(--text-divider-gap);
+  margin-top: var(--text-divider-gap);
+  margin-bottom: var(--text-divider-gap);
 }
 
 .text-divider::after {
   margin-left: var(--text-divider-gap);
   margin-right: var(--text-divider-gap);
+  margin-top: var(--text-divider-gap);
+  margin-bottom: var(--text-divider-gap);
 }
 html {
   background: url(formimg.jpg) no-repeat center center fixed;
@@ -99,9 +147,13 @@ html {
 .area1 {
   align-self: center;
 }
-.btn {
+.button {
   align-self: center;
 }
 .area2 {
   align-self: center;
+}
+.drop-down {
+  text-align: left;
+  margin-left: 3rem;
 }

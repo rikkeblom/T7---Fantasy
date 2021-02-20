@@ -24,10 +24,11 @@
             <h1>I know what i want</h1>
             <div>
               <div class="formgrid">
-                <section>
+                <section class="drop-down">
                   <div>
                     <label for="race">Race:</label>
                     <select id="race" name="race">
+                      <option disabled selected></option>
                       <option value="human">Human</option>
                       <option value="elf">Elf</option>
                       <option value="dwarf">Dwarf</option>
@@ -37,6 +38,7 @@
                   <div>
                     <label for="gender">Gender:</label>
                     <select id="gender" name="gender">
+                      <option disabled selected></option>
                       <option value="female">Female</option>
                       <option value="non-binary">Non-binary</option>
                       <option value="male">Male</option>
@@ -45,6 +47,7 @@
                   <div>
                     <label for="alignment">Alignment:</label>
                     <select id="alignment" name="alignment">
+                      <option disabled selected></option>
                       <option value="lawful-good">Lawful good</option>
                       <option value="neutral-good">Neutral good</option>
                       <option value="chaotic-good">Chaotic good</option>
@@ -57,15 +60,17 @@
                     </select>
                   </div>
                 </section>
-                <div class="btn">
-                  <a href="#"><button>Make me</button></a>
+                <div class="button" id="button-5">
+                  <div id="translate"></div>
+                  <a href="#">Make me</a>
                 </div>
               </div>
               <div class="text-divider">or</div>
               <div class="formgrid2">
                 <h1>Make it random</h1>
-                <div class="btn">
-                  <a href="#"><button>Surprise me</button></a>
+                <div class="button" id="button-5">
+                  <div id="translate"></div>
+                  <a href="#">Surprise me</a>
                 </div>
               </div>
             </div>
