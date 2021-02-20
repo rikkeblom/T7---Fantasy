@@ -11,13 +11,11 @@
   --heading-font: "Grenze Gotisch", cursive;
   --general-font: "Quicksand", sans-serif;
 }
-body {
-  background-color: #333333;
-}
 .maingrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  margin: auto;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  margin: 0rem 10rem 0rem 10rem;
 }
 h1 {
   font-family: var(--heading-font);
@@ -48,7 +46,12 @@ img {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 10rem 0rem 10rem 0rem;
+  height: 400px;
+  width: 600px;
+  margin: auto;
+  background-color: var(--color-4);
+  box-shadow: 5px 5px 10px #000;
+  border-radius: 10px;
 }
 .formgrid {
   display: grid;
@@ -72,7 +75,7 @@ img {
 .text-divider::before,
 .text-divider::after {
   content: "";
-  height: 1px;
+  height: 3px;
   background-color: #ffffff;
   flex-grow: 1;
 }
@@ -84,4 +87,17 @@ img {
 .text-divider::after {
   margin-left: var(--text-divider-gap);
   margin-right: var(--text-divider-gap);
+}
+html {
+  background: url(formimg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.area1 {
+  align-self: center;
+}
+.btn {
+  align-self: center;
 }
