@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+:root {
+  --background-color: #333;
+  --color-1: #43122a;
+  --color-2: #58304c;
+  --color-3: #4e4d7e;
+  --color-4: #475957;
+  --color-5: #768972;
+  --color-6: #739fa4;
+  --heading-font: "Grenze Gotisch", cursive;
+  --general-font: "Quicksand", sans-serif;
+}
+body {
+  background-color: #333333;
+}
+.maingrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+h1 {
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+}
+label {
+  font-family: var(--general-font);
+}
+button {
+  font-family: var(--general-font);
+  text-transform: uppercase;
+  height: 50px;
+  width: 150px;
+}
+img {
+  height: auto;
+  max-width: 100%;
+}
