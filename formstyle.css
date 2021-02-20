@@ -17,21 +17,41 @@ body {
 .maingrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: auto;
 }
 h1 {
   font-family: var(--heading-font);
   text-transform: uppercase;
+  color: #ffffff;
 }
 label {
   font-family: var(--general-font);
+  color: #ffffff;
 }
 button {
   font-family: var(--general-font);
   text-transform: uppercase;
+  background-color: var(--color-3);
+  color: #ffffff;
   height: 50px;
   width: 150px;
 }
 img {
   height: auto;
   max-width: 100%;
+}
+.formflex {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.formgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: auto;
+}
+.formgrid2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: auto;
 }
