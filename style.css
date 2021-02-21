@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@font-face {
+  font-family: meath;
+  src: url("MeathFLF.ttf");
+}
 * {
   box-sizing: border-box;
   text-decoration: none;
