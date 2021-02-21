@@ -1,5 +1,5 @@
 body {
-  background: url(formimg.jpg) no-repeat center center fixed;
+  background: url(bluewoods.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -107,9 +107,9 @@ a {
   height: 40vw;
   width: 50vw;
   margin: auto;
-  background-color: #333333;
+  /* background-color: #333333;
   box-shadow: 5px 5px 10px #000;
-  border-radius: 10px;
+  border-radius: 10px; */
 }
 .formgrid {
   display: grid;
@@ -171,9 +171,9 @@ a {
     height: 45vw;
     width: 55vw;
     margin: auto;
-    background-color: #333333;
+    /* background-color: #333333;
     box-shadow: 5px 5px 10px #000;
-    border-radius: 10px;
+    border-radius: 10px; */
   }
   .but1 {
     left: 30vw;
