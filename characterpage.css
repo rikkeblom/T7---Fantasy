@@ -1,0 +1,39 @@
+#topnav_area {
+  grid-area: tn;
+}
+
+#area_1 {
+  grid-area: s1;
+}
+
+#area_2 {
+  grid-area: s2;
+  /* height: 400px;
+    width: 600px; */
+  margin: auto;
+  background-color: var(--color-4);
+  box-shadow: 5px 5px 10px #000;
+  border-radius: 10px;
+}
+
+@media only screen and (min-width: 1071px) {
+  body {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-areas:
+      " tn tn "
+      " s1 s2 ";
+  }
+}
+
+@media only screen and (max-width: 1070px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      " tn "
+      " s1 "
+      " s2 ";
+  }
+}
