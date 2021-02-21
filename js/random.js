@@ -1,7 +1,7 @@
 const gender = ["female", "male", "non-binary"];
-
 const urlRace = "https://kea21-7e1e.restdb.io/rest/race";
-const urlFirstName = "https://kea21-7e1e.restdb.io/rest/firstname";
+const urlMaleName = "https://kea21-7e1e.restdb.io/rest/malename";
+const urlFemaleName = "https://kea21-7e1e.restdb.io/rest/femalename";
 const urlOccupation = "https://kea21-7e1e.restdb.io/rest/occupation";
 const options = {
   headers: {
@@ -9,6 +9,7 @@ const options = {
   },
 };
 
+//random race-------------------------
 fetch(urlRace, options)
   .then((response) => {
     return response.json();
@@ -22,21 +23,7 @@ function randomRace(race) {
     race[Math.floor(Math.random() * race.length)].x;
 }
 
-fetch(urlFirstName, options)
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    randomFirstName(data);
-  });
-
-function randomFirstName(name) {
-  const a = document.querySelectorAll(".name");
-  const b = name[Math.floor(Math.random() * name.length)].x;
-  a[0].textContent = b;
-  a[1].textContent = b;
-}
-
+//random occupation-------------------------
 fetch(urlOccupation, options)
   .then((response) => {
     return response.json();
@@ -50,11 +37,47 @@ function randomOccupation(occupation) {
     occupation[Math.floor(Math.random() * occupation.length)].x;
 }
 
-document.querySelector(".gender").textContent =
-  gender[Math.floor(Math.random() * gender.length)];
+//random gender-------------------------
+const genderplace = document.querySelector(".gender");
+const charactergender = gender[Math.floor(Math.random() * gender.length)];
+genderplace.textContent = charactergender;
+randomName();
+//random name (based on gender)----------------------
 
-//   <p>Meet <span class="name"></span></p>
-//   <p>
-//   <span class="name"></span> is a <span class="gender"></span>
-//   <span class="race"></span> <span class="occupation"></span>
-//   </p>
+function randomName() {
+  if (charactergender == "female") {
+    console.log("female name");
+    fetch(urlFemaleName, options)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        randomFemaleName(data);
+      });
+  } else {
+    console.log("male or non-binary name");
+    fetch(urlMaleName, options)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        randomMaleName(data);
+      });
+  }
+}
+
+function randomFemaleName(name) {
+  const a = document.querySelectorAll(".name");
+  const b = name[Math.floor(Math.random() * name.length)].x;
+  a[0].textContent = b;
+  a[1].textContent = b;
+  console.log(b);
+}
+
+function randomMaleName(name) {
+  const a = document.querySelectorAll(".name");
+  const b = name[Math.floor(Math.random() * name.length)].x;
+  a[0].textContent = b;
+  a[1].textContent = b;
+  console.log(b);
+}
