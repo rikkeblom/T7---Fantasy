@@ -1,24 +1,151 @@
+body {
+  background-image: url(bigbackground_1-100.jpg);
+  position: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+.character {
+  background-image: url("charactergrey.svg");
+  position: absolute;
+  background-size: 100%;
+  width: 40vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  left: 3vw;
+}
+p.title {
+  font-family: var(--heading-font);
+  color: #ffffff;
+  position: absolute;
+  top: 5vw;
+  left: 60vw;
+  font-size: 5vw;
+  text-align: center;
+  padding: 5vw;
+  max-width: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+.button {
+  display: inline-flex;
+  height: 7vw;
+  width: 18vw;
+  border: 2px solid #475957;
+  margin: 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2.5vw;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#button-5 {
+  position: absolute;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--background-color);
+  left: 64vw;
+  top: 35vw;
+}
+
+#button-5 a {
+  position: relative;
+  transition: all 0.45s ease-Out;
+  color: var(--color-6);
+  font-family: var(--general-font);
+}
+
+#translate {
+  transform: rotate(50deg);
+  width: 150%;
+  height: 200%;
+  left: -50vw;
+  top: -5vw;
+
+  background: #475957;
+  position: absolute;
+  transition: all 0.6s ease-Out;
+}
+
+#button-5:hover #translate {
+  left: 0;
+}
+
+#button-5:hover a {
+  color: #ffffff;
+}
 @media screen and (max-width: 600px) {
-  /*navigation in mobile*/
-  .burger {
-    display: block;
+  body {
+    background-image: url(background-100.jpg);
+    position: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
   }
-  .nav-links a {
+  .character {
+    background-image: url(charactergrey.svg);
+    position: absolute;
+    background-size: 100%;
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    top: 20vw;
+    left: 3vw;
+  }
+  p.title {
+    font-family: var(--heading-font);
+    color: #ffffff;
+    position: absolute;
+    top: 20vw;
+    left: 53vw;
+    font-size: 10vw;
+    text-align: center;
+    padding: 0;
+  }
+  .button {
+    display: inline-flex;
+    height: 15vw;
+    width: 30vw;
+    border: 2px solid #475957;
+    margin: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 4vw;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  #button-5 {
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--background-color);
+    left: 55vw;
+    top: 85vw;
+  }
+
+  #button-5 a {
+    position: relative;
+    transition: all 0.45s ease-Out;
+    color: var(--color-6);
     font-family: var(--general-font);
   }
-  .nav-links {
-    position: fixed;
-    top: 8vh;
-    right: 0;
-    height: 92vh;
-    width: 50%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    background: var(--background-color);
-    transform: translateX(100%);
-    transition: transform 1s ease;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
-    z-index: 1;
+
+  #translate {
+    transform: rotate(50deg);
+    width: 150%;
+    height: 150%;
+    left: -50vw;
+    top: -6vw;
+
+    background: #475957;
+    position: absolute;
+    transition: all 0.6s ease-Out;
   }
 }

@@ -1,39 +1,152 @@
-#topnav_area {
+/* #topnav_area {
   grid-area: tn;
-}
+} */
 
-#area_1 {
-  grid-area: s1;
+body {
+  background: url(formimg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-
-#area_2 {
-  grid-area: s2;
-  /* height: 400px;
-    width: 600px; */
-  margin: auto;
-  background-color: var(--color-4);
+h2 {
+  font-size: 2vw;
+}
+p {
+  font-family: var(--general-font);
+  color: white;
+  font-size: 1vw;
+  max-width: 500px;
+  margin-left: 4vw;
+  margin-right: 4vw;
+}
+.wholeform {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.formflex {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  height: 50vw;
+  width: 50vw;
+  margin: 3vw;
+  background-color: #333333;
   box-shadow: 5px 5px 10px #000;
   border-radius: 10px;
 }
+.img-avatar {
+  position: relative;
+  top: 10vw;
+  width: 40vw;
+}
+.button {
+  display: inline-flex;
+  height: 4vw;
+  width: 13vw;
+  border: 2px solid #475957;
+  margin: 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.5vw;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#button-5 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--background-color);
+  top: 3vw;
+  left: 19vw;
+}
+#button-5 a {
+  position: relative;
+  transition: all 0.45s ease-Out;
+  color: var(--color-6);
+  font-family: var(--general-font);
+}
+
+#translate {
+  transform: rotate(50deg);
+  width: 150%;
+  height: 200%;
+  left: -50vw;
+  top: -5vw;
+
+  background: #475957;
+  position: absolute;
+  transition: all 0.6s ease-Out;
+}
+
+#button-5:hover #translate {
+  left: 0;
+}
+
+#button-5:hover a {
+  color: #ffffff;
+}
 
 @media only screen and (min-width: 1071px) {
-  body {
+  .wholeform {
     display: grid;
-    grid-gap: 0px;
+
     grid-template-columns: 1fr 0.5fr;
-    grid-template-areas:
-      " tn tn "
-      " s1 s2 ";
   }
 }
 
 @media only screen and (max-width: 1070px) {
-  body {
+  .wholeform {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas:
-      " tn "
-      " s1 "
-      " s2 ";
+    grid-template-rows: 1fr 1fr;
+  }
+  #area_1 {
+    justify-self: center;
+  }
+  #area_2 {
+    justify-self: center;
+  }
+  .img-avatar {
+    top: 10vw;
+    width: 90vw;
+  }
+  .formflex {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    height: 75vw;
+    width: 70vw;
+    margin: 8vw;
+    background-color: #333333;
+    box-shadow: 5px 5px 10px #000;
+    border-radius: 10px;
+    justify-content: center;
+  }
+  p {
+    font-family: var(--general-font);
+    color: white;
+    font-size: 3vw;
+    max-width: 500px;
+    margin-left: 4vw;
+    margin-right: 4vw;
+  }
+  h2 {
+    font-size: 3vw;
+  }
+  .button {
+    display: inline-flex;
+    height: 7vw;
+    width: 20vw;
+    font-size: 2vw;
+  }
+  #button-5 {
+    top: 2vw;
+    left: 27vw;
   }
 }

@@ -1,39 +1,201 @@
-#topnav_area {
-  grid-area: tn;
+body {
+  background: url(formimg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
+#wholeform {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+label {
+  font-size: 1.3vw;
+  margin-left: 4vw;
+  font-family: var(--general-font);
+  color: #ffffff;
+}
+select {
+  width: 5vw;
+  height: 1.5vw;
+}
 #area1 {
-  grid-area: s1;
-  /* height: 400px;
-    width: 600px; */
+  grid-column-start: 1;
+  grid-column-end: 2;
+  height: 40vw;
+  width: 60vw;
   margin: auto;
-  background-color: var(--color-4);
-  box-shadow: 5px 5px 10px #000;
   border-radius: 10px;
+  margin: 2vw;
 }
 
 #area2 {
-  grid-area: s2;
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+label {
+  font-size: 1.25rem;
+  font-family: var(--general-font);
+  color: #ffffff;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: var(--general-font);
+}
+.button {
+  display: inline-flex;
+  height: 4vw;
+  width: 13vw;
+  border: 2px solid #475957;
+  margin: 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.5vw;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#button-5 {
+  position: absolute;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--background-color);
+}
+.but1 {
+  left: 30vw;
+  top: 10vw;
+}
+.but2 {
+  left: 20vw;
+  top: 30vw;
+}
+#button-5 a {
+  position: relative;
+  transition: all 0.45s ease-Out;
+  color: var(--color-6);
+  font-family: var(--general-font);
 }
 
-@media only screen and (min-width: 1071px) {
-  body {
-    display: grid;
-    grid-gap: 0px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      " tn tn "
-      " s1 s2 ";
+#translate {
+  transform: rotate(50deg);
+  width: 150%;
+  height: 200%;
+  left: -50vw;
+  top: -5vw;
+
+  background: #475957;
+  position: absolute;
+  transition: all 0.6s ease-Out;
+}
+
+#button-5:hover #translate {
+  left: 0;
+}
+
+#button-5:hover a {
+  color: #ffffff;
+}
+.formflex {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  height: 40vw;
+  width: 50vw;
+  margin: auto;
+  background-color: #333333;
+  box-shadow: 5px 5px 10px #000;
+  border-radius: 10px;
+}
+.formgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: auto;
+}
+.formgrid2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: auto;
+}
+.text-divider {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  font-size: 3vw;
+  --text-divider-gap: 2vw;
+}
+.text-divider::before,
+.text-divider::after {
+  content: "";
+  height: 0.5vw;
+  background-color: #ffffff;
+  flex-grow: 1;
+}
+
+.img-avatar {
+  width: 30vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .img-avatar {
+    width: 50vw;
   }
-}
-
-@media only screen and (max-width: 1070px) {
-  body {
+  #wholeform {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "tn"
-      " s2 "
-      " s1 ";
+    grid-template-rows: 1fr 1fr;
+  }
+  #area2 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-self: center;
+  }
+  #area1 {
+    grid-row-start: 2;
+    grid-row-end: -2;
+    justify-self: center;
+  }
+  .formflex {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    height: 45vw;
+    width: 55vw;
+    margin: auto;
+    background-color: #333333;
+    box-shadow: 5px 5px 10px #000;
+    border-radius: 10px;
+  }
+  .but1 {
+    left: 30vw;
+    top: 13vw;
+  }
+  .but2 {
+    left: 20vw;
+    top: 36vw;
+  }
+  .button {
+    height: 6vw;
+    width: 15vw;
+    font-size: 1.7vw;
+  }
+  label {
+    font-size: 3vw;
+    margin-left: 4vw;
+    font-family: var(--general-font);
+    color: #ffffff;
+  }
+  select {
+    width: 10vw;
+    height: 2vw;
   }
 }
