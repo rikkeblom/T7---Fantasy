@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fantasy</title>
+    <link rel="stylesheet" href="formstyle.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="style.css" />
+ 
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+        <div class="logo">Logo</div>
+        <ul class="nav-links">
+          <li><a href="index.html">About</a></li>
+          <li><a href="characterpage.html">characterpage</a></li>
+          <li><a href="#">Something</a></li>
+        </ul>
+        <div id="burger" class="burger">
+          <i onclick="myFunction(this)" class="burgericon"></i>
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+        </div>
+      </nav>
+    </header>
+        <article id="area1">
+            <h1>I know what i want</h1>
+            <div>
+                <section>
+                  <div>
+                    <label for="race">Race:</label>
+                    <select id="race" name="race">
+                      <option value="human">Human</option>
+                      <option value="elf">Elf</option>
+                      <option value="dwarf">Dwarf</option>
+                      <option value="tiefling">Tiefling</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                      <option value="female">Female</option>
+                      <option value="non-binary">Non-binary</option>
+                      <option value="male">Male</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="alignment">Alignment:</label>
+                    <select id="alignment" name="alignment">
+                      <option value="lawful-good">Lawful good</option>
+                      <option value="neutral-good">Neutral good</option>
+                      <option value="chaotic-good">Chaotic good</option>
+                      <option value="lawful-neutral">Lawful neutral</option>
+                      <option value="true-neutral">True neutral</option>
+                      <option value="chaotic-neutral">Chaotic neutral</option>
+                      <option value="lawful-evil">Lawful evil</option>
+                      <option value="neutral-evil">Neutral evil</option>
+                      <option value="chaotic-evil">Chaotic evil</option>
+                    </select>
+                  </div>
+                </section>
+                <div class="btn">
+                  <a href="#"><button>Make me</button></a>
+                </div>
+              </div>
+              <div class="text-divider">or</div>
+                <h1>Make it random</h1>
+                <div class="btn">
+                  <a href="#"><button>Surprise me</button></a>
+                </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="area2">
+          <img src="146463.png" class="img-avatar" alt="" />
+        </article>
+      </div>
+  </body>
+</html>

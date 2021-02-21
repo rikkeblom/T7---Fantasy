@@ -10,6 +10,8 @@
       type="text/css"
       media="all"
     />
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
@@ -18,9 +20,19 @@
 
   <body>
     <header>
-      <div class="nav-icon">
-        <div></div>
-      </div>
+      <nav class="main-nav">
+        <div class="logo">Logo</div>
+        <ul class="nav-links">
+          <li><a href="form.html">Make Avatar</a></li>
+          <li><a href="characterpage.html">Character</a></li>
+          <li><a href="#">Something</a></li>
+        </ul>
+        <div id="burger" class="burger">
+          <i onclick="myFunction(this)" class="burgericon"></i>
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+        </div>
+      </nav>
     </header>
     <!-- Top Navigation Menu -->
     <article id="area_1">
@@ -46,7 +58,7 @@
           unconscious.
         </p>
         <p>Elvina is fun to have at parties!</p>
-        
+
         <div class="text-divider">or</div>
         <div class="col">
           <div class="container-2">

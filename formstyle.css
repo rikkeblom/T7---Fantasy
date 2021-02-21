@@ -2,12 +2,8 @@
   grid-area: tn;
 }
 
-#area_1 {
+#area1 {
   grid-area: s1;
-}
-
-#area_2 {
-  grid-area: s2;
   /* height: 400px;
     width: 600px; */
   margin: auto;
@@ -16,11 +12,15 @@
   border-radius: 10px;
 }
 
+#area2 {
+  grid-area: s2;
+}
+
 @media only screen and (min-width: 1071px) {
   body {
     display: grid;
     grid-gap: 0px;
-    grid-template-columns: 1fr 0.5fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
       " tn tn "
       " s1 s2 ";
@@ -32,8 +32,8 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
-      " tn "
-      " s1 "
-      " s2 ";
+      "tn"
+      " s2 "
+      " s1 ";
   }
 }
