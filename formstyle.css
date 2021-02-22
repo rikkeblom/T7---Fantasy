@@ -17,9 +17,18 @@ label {
   color: #ffffff;
 }
 select {
-  width: 5vw;
+  width: 7vw;
   height: 1.5vw;
 }
+
+.formheading {
+  font-family: var(--heading-font);
+  color: #ffffff;
+  margin: 0;
+  font-size: 3vw;
+  max-width: 100%;
+}
+
 #area1 {
   grid-column-start: 1;
   grid-column-end: 2;
@@ -58,6 +67,8 @@ a {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  align-self: center;
+  justify-self: center;
 }
 #button-5 {
   position: relative;
@@ -95,9 +106,7 @@ a {
 .formflex {
   display: flex;
   flex-direction: column;
-  text-align: left;
-  height: 40vw;
-  width: 50vw;
+  text-align: center;
   margin: auto;
   background-color: #333333;
   box-shadow: 5px 5px 10px #000;
@@ -105,13 +114,16 @@ a {
 }
 .formgrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   margin: auto;
+  text-align: left;
+  padding: 4vw 0vw 4vw 0vw;
 }
 .formgrid2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   margin: auto;
+  padding: 4vw 0vw 2vw 0vw;
 }
 .text-divider {
   display: flex;
@@ -128,6 +140,8 @@ a {
   height: 0.5vw;
   background-color: #ffffff;
   flex-grow: 1;
+  margin-left: var(--text-divider-gap);
+  margin-right: var(--text-divider-gap);
 }
 
 .img-avatar {
@@ -158,9 +172,7 @@ a {
   .formflex {
     display: flex;
     flex-direction: column;
-    text-align: left;
-    height: 45vw;
-    width: 55vw;
+    text-align: center;
     margin: auto;
     background-color: #333333;
     box-shadow: 5px 5px 10px #000;
@@ -181,5 +193,16 @@ a {
   select {
     width: 10vw;
     height: 2vw;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .formflex {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    background-color: #333333;
+    box-shadow: 5px 5px 10px #000;
+    border-radius: 10px;
   }
 }
