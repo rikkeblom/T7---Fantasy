@@ -83,6 +83,14 @@ p {
 #button-5:hover a {
   color: #ffffff;
 }
+
+.capitalize {
+  text-transform: capitalize;
+}
+.hidden {
+  display: none;
+}
+
 @media only screen and (min-width: 1071px) {
   .wholeform {
     display: grid;
@@ -101,7 +109,6 @@ p {
   #area_2 {
     justify-self: center;
   }
-
 
   .formflex {
     position: relative;

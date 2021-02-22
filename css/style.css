@@ -14,7 +14,3 @@
   --heading-font: "Grenze Gotisch", cursive;
   --general-font: "Quicksand", sans-serif;
 }
-
-.capitalize {
-  text-transform: capitalize;
-}
