@@ -18,6 +18,7 @@ const urlMannerism = "https://kea21-7e1e.restdb.io/rest/mannerism";
 const urlObjective = "https://kea21-7e1e.restdb.io/rest/objective";
 const urlPosAdj = "https://kea21-7e1e.restdb.io/rest/positiveadjective";
 const urlNegAdj = "https://kea21-7e1e.restdb.io/rest/negativeadjective";
+const urlLastname = "https://kea21-7e1e.restdb.io/rest/lastname";
 const options = {
   headers: {
     "x-apikey": "602f9e445ad3610fb5bb63d5",
@@ -271,6 +272,21 @@ function randomFemaleName(name) {
       c[2].textContent = "her";
       c[3].textContent = "her";
     });
+}
+
+//random Lastname ------------DONE----
+fetch(urlLastname, options)
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    randomLastname(data);
+  });
+
+function randomLastname(name) {
+  const randName = name[Math.floor(Math.random() * name.length)].x;
+  console.log(randName);
+  document.querySelector(".lastname").textContent = randName;
 }
 
 //random background ------------DONE----
