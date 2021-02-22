@@ -56,10 +56,9 @@ h2 {
   align-items: center;
   color: var(--color-6);
 }
-.logo {
-  font-family: var(--heading-font);
-  font-size: 1rem;
-  padding: 0 2rem;
+img.logo {
+  width: 3em;
+  margin-left: 1.2vw;
 }
 .nav-links {
   display: flex;
