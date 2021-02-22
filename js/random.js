@@ -1,7 +1,16 @@
 const gender = ["female", "male", "non-binary"];
+const professionalism = [
+  "Professional",
+  "Amateur",
+  "Expert",
+  "Licensed",
+  "Novice",
+];
 const urlRace = "https://kea21-7e1e.restdb.io/rest/race";
 const urlMaleName = "https://kea21-7e1e.restdb.io/rest/malename";
 const urlFemaleName = "https://kea21-7e1e.restdb.io/rest/femalename";
+const urlGenderNeutralName =
+  "https://kea21-7e1e.restdb.io/rest/genderneutralname";
 const urlOccupation = "https://kea21-7e1e.restdb.io/rest/occupation";
 const urlBackground = "https://kea21-7e1e.restdb.io/rest/background";
 const urlAlignment = "https://kea21-7e1e.restdb.io/rest/alignment";
@@ -11,7 +20,7 @@ const options = {
   },
 };
 
-//look through the link
+//look through the link -------------KEEP-UPDATING-AS-WE-EXPAND--
 const urlParams = new URLSearchParams(window.location.search);
 const linkrace = urlParams.get("race");
 const linkgender = urlParams.get("gender");
@@ -44,6 +53,11 @@ if (linkrace == "human") {
       race[Math.floor(Math.random() * race.length)].x;
   }
 }
+
+//random professionalism adjective --------------
+const randProfessionalism =
+  professionalism[Math.floor(Math.random() * professionalism.length)];
+document.querySelector(".professionalism").textContent = randProfessionalism;
 
 //get either the ALIGNMENT you picked or a random one --DONE--
 if (linkalignment == "lawful-good") {
@@ -88,7 +102,7 @@ if (linkalignment == "lawful-good") {
   }
 }
 
-//random occupation-----------------------DONE--
+//random occupation-----------------------I MESSED THIS ONE UP???--
 fetch(urlOccupation, options)
   .then((response) => {
     return response.json();
@@ -98,8 +112,10 @@ fetch(urlOccupation, options)
   });
 
 function randomOccupation(occupation) {
-  document.querySelector(".occupation").textContent =
+  const randOccupation =
     occupation[Math.floor(Math.random() * occupation.length)].x;
+  console.log(randOccupation);
+  document.querySelector(".occupation").textContent = randOccupation;
 }
 
 //get either the gender you picked or a random --DONE--
@@ -111,7 +127,7 @@ if (linkgender === "female") {
   randomMaleName();
 } else if (linkgender === "non-binary") {
   console.log("You chose non-binary");
-  randomMaleName();
+  randomNonBinaryName();
 } else {
   const genderplace = document.querySelector(".gender");
   const charactergender = gender[Math.floor(Math.random() * gender.length)];
@@ -134,9 +150,34 @@ function randomMaleName(name) {
       const b = name[Math.floor(Math.random() * name.length)].x;
       a[0].textContent = b;
       a[1].textContent = b;
+      a[2].textContent = b;
       console.log(b);
       const c = document.querySelectorAll(".pronoun");
       c[0].textContent = "he";
+      c[1].textContent = "he";
+      c[2].textContent = "him";
+      c[3].textContent = "him";
+    });
+}
+
+function randomNonBinaryName(name) {
+  console.log("non-binary name");
+  fetch(urlMaleName, options)
+    .then((response) => {
+      return response.json();
+    })
+    .then((name) => {
+      const a = document.querySelectorAll(".name");
+      const b = name[Math.floor(Math.random() * name.length)].x;
+      a[0].textContent = b;
+      a[1].textContent = b;
+      a[2].textContent = b;
+      console.log(b);
+      const c = document.querySelectorAll(".pronoun");
+      c[0].textContent = "they";
+      c[1].textContent = "they";
+      c[2].textContent = "them";
+      c[3].textContent = "them";
     });
 }
 
@@ -149,11 +190,15 @@ function randomFemaleName(name) {
     .then((name) => {
       const a = document.querySelectorAll(".name");
       const b = name[Math.floor(Math.random() * name.length)].x;
+      document.querySelector("#remove").classList.add("hidden");
       a[0].textContent = b;
       a[1].textContent = b;
       console.log(b);
       const c = document.querySelectorAll(".pronoun");
       c[0].textContent = "she";
+      c[1].textContent = "she";
+      c[2].textContent = "her";
+      c[3].textContent = "her";
     });
 }
 
@@ -167,6 +212,8 @@ fetch(urlBackground, options)
   });
 
 function randomBackground(background) {
-  document.querySelector("#background").textContent =
+  const randBackground =
     background[Math.floor(Math.random() * background.length)].x;
+  console.log(randBackground);
+  document.querySelector(".background").textContent = randBackground;
 }
