@@ -91,6 +91,20 @@ p {
   display: none;
 }
 
+#load {
+  background-color: #586779c5;
+  height: 100vw;
+  width: 100vw;
+  position: absolute;
+  top: 70px;
+  z-index: 10;
+}
+
+#load h1 {
+  text-align: center;
+  margin-top: 10vw;
+}
+
 @media only screen and (min-width: 1071px) {
   .wholeform {
     display: grid;

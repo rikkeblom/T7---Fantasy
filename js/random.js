@@ -25,6 +25,16 @@ const options = {
   },
 };
 
+window.addEventListener("load", setTimer);
+
+function setTimer() {
+  setTimeout(removeLoadScreen, 22000);
+}
+
+function removeLoadScreen() {
+  document.querySelector("#load").classList.add("hidden");
+}
+
 //look through the link -------------DONE--
 const urlParams = new URLSearchParams(window.location.search);
 const linkrace = urlParams.get("race");
