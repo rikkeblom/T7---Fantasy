@@ -205,8 +205,10 @@ if (linkgender === "female") {
   genderplace.textContent = charactergender;
   if (charactergender == "female") {
     randomFemaleName();
-  } else {
+  } else if (charactergender == "male") {
     randomMaleName();
+  } else {
+    randomNonBinaryName();
   }
 }
 
