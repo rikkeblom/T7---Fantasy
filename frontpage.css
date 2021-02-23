@@ -1,5 +1,5 @@
 body {
-  background-image: url(bigbackground_1-100.jpg);
+  background-image: url(img/bigbackground_1-100.jpg);
   position: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -7,7 +7,7 @@ body {
   width: 100%;
 }
 .character {
-  background-image: url("charactergrey.svg");
+  background-image: url("img/charactergrey.svg");
   position: absolute;
   background-size: 100%;
   width: 40vw;
@@ -81,14 +81,14 @@ p.title {
 }
 @media screen and (max-width: 600px) {
   body {
-    background-image: url(background-100.jpg);
+    background-image: url(img/background-100.jpg);
     position: fixed;
     background-size: cover;
     height: 100%;
     width: 100%;
   }
   .character {
-    background-image: url(charactergrey.svg);
+    background-image: url(img/charactergrey.svg);
     position: absolute;
     background-size: 100%;
     width: 50%;

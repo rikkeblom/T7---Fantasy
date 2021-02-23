@@ -1,6 +1,5 @@
 body {
-  background: url(formimg.jpg) no-repeat center center fixed;
-  background: url(bluewoods.png) no-repeat center center fixed;
+  background: url(img/bluewoods.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -101,7 +100,6 @@ p {
   #area_2 {
     justify-self: center;
   }
-
 
   .formflex {
     position: relative;
