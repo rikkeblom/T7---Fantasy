@@ -182,6 +182,36 @@ function randomPosAdj(adj) {
   a[0].textContent = randPosAdjA;
   a[1].textContent = randPosAdjB;
   a[2].textContent = randPosAdjC;
+  if (randPosAdjA == randPosAdjB) {
+    console.log("new adjectives please");
+    fetch(urlPosAdj, options)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        randomPosAdj(data);
+      });
+  } else if (randPosAdjA == randPosAdjC) {
+    console.log("new adjectives please");
+    fetch(urlPosAdj, options)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        randomPosAdj(data);
+      });
+  } else if (randPosAdjB == randPosAdjC) {
+    console.log("new adjectives please");
+    fetch(urlPosAdj, options)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        randomPosAdj(data);
+      });
+  } else {
+    console.log("You got 3 unique adjectives on first try");
+  }
 }
 
 //random Negative Adjectives---------------------------------
@@ -350,7 +380,7 @@ if (document.querySelector(".race").textContent == "human") {
       // document.querySelector(".img-avatar").src = "";
     }
   }
-  //----------------DWARF-----------------ready for images--
+  //----------------DWARF-----------------DONE--
 } else if (document.querySelector(".race").textContent == "dwarf") {
   if (document.querySelector(".gender").textContent == "male") {
     if (window.innerWidth > 520 == true) {
@@ -377,7 +407,7 @@ if (document.querySelector(".race").textContent == "human") {
       document.querySelector(".img-avatar").src = "../img/dwarf-boy.svg";
     }
   }
-  //-------------TIEFLING-------------
+  //-------------TIEFLING-----------DONE--
 } else if (document.querySelector(".race").textContent == "tiefling") {
   if (document.querySelector(".gender").textContent == "male") {
     if (window.innerWidth > 520 == true) {
