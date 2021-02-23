@@ -355,26 +355,26 @@ if (document.querySelector(".race").textContent == "human") {
   if (document.querySelector(".gender").textContent == "male") {
     if (window.innerWidth > 520 == true) {
       console.log("Insert Full body dwarf MALE image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/dwarf-boy.svg";
     } else {
       console.log("Insert BUST of dwarf MALE image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/dwarf-boy.svg";
     }
   } else if (document.querySelector(".gender").textContent == "female") {
     if (window.innerWidth > 520 == true) {
       console.log("Insert Full body dwarf FEMALE image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/dwarf-girl.svg";
     } else {
       console.log("Insert BUST of dwarf FEMALE image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/dwarf-girl.svg";
     }
   } else {
     if (window.innerWidth > 520 == true) {
       console.log("Insert Full body dwarf NON-BINARY image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/dwarf-boy.svg";
     } else {
       console.log("Insert bust of dwarf NON-BINARY image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/dwarf-boy.svg";
     }
   }
   //-------------TIEFLING-------------
@@ -382,26 +382,29 @@ if (document.querySelector(".race").textContent == "human") {
   if (document.querySelector(".gender").textContent == "male") {
     if (window.innerWidth > 520 == true) {
       console.log("Insert Full body tiefling MALE image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/tiefling-boy.svg";
     } else {
       console.log("Insert BUST of tiefling MALE image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src =
+        "../img/tiefling-boy-bust.svg";
     }
   } else if (document.querySelector(".gender").textContent == "female") {
     if (window.innerWidth > 520 == true) {
       console.log("Insert Full body tiefling FEMALE image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/tiefling-girl.svg";
     } else {
       console.log("Insert BUST of tiefling FEMALE image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src =
+        "../img/tiefling-girl-bust.svg";
     }
   } else {
     if (window.innerWidth > 520 == true) {
       console.log("Insert Full body tiefling NON-BINARY image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/tiefling-boy.svg";
     } else {
       console.log("Insert bust of tiefling NON-BINARY image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src =
+        "../img/tiefling-boy-bust.svg";
     }
   }
 
@@ -410,26 +413,26 @@ if (document.querySelector(".race").textContent == "human") {
   if (document.querySelector(".gender").textContent == "male") {
     if (window.innerWidth > 520 == true) {
       console.log("Insert Full body elf MALE image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/elf-boy.svg";
     } else {
       console.log("Insert BUST of elf MALE image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/elf-boy-bust.svg";
     }
   } else if (document.querySelector(".gender").textContent == "female") {
     if (window.innerWidth > 520 == true) {
       console.log("Insert Full body elf FEMALE image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/elf-girl.svg";
     } else {
       console.log("Insert BUST of elf FEMALE image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/elf-girl-bust.svg";
     }
   } else {
     if (window.innerWidth > 520 == true) {
       console.log("Insert Full body elf NON-BINARY image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/elf-girl.svg";
     } else {
       console.log("Insert bust of elf NON-BINARY image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/elf-girl-bust.svg";
     }
   }
 
