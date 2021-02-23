@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fantasy</title>
-    <link rel="stylesheet" href="frontpage.css" type="text/css" media="all" />
+    <title>About</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="about.css" />
   </head>
   <body>
-    <head>
+    <header>
       <nav class="main-nav">
         <img
           class="logo"
@@ -18,9 +18,9 @@
           onclick="window.location.href='index.html'"
         />
         <ul class="nav-links">
-          <li><a id="selected">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="form.html">Make Avatar</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a id="selected">About</a></li>
         </ul>
         <div id="burger" class="burger">
           <i onclick="myFunction(this)" class="burgericon"></i>
@@ -28,16 +28,16 @@
           <div class="line line2"></div>
         </div>
       </nav>
-    </head>
-    <body>
-      <div class="character"></div>
-      <p class="title">Create your character</p>
-      <div class="button" id="button-5">
-        <div id="translate"></div>
-        <a href="form.html">Create</a>
-      </div>
-    </body>
+    </header>
+    <main>
+      <h1 class="abouttitle">Welcome to our Character Generator!</h1>
+      <p>
+        Have you lost your inspiration? Here is the perfect place to find it
+        hidden in the dark woods of your mind??? Annnnnd more text.
+      </p>
+    </main>
     <footer></footer>
+
     <script src="frontpage.js"></script>
   </body>
 </html>
