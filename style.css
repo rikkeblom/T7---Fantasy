@@ -145,7 +145,7 @@ img.logo {
   }
 
   .burgericon {
-    background-image: url(hamburger.png);
+    background-image: url(img/hamburger.png);
     width: 7vw;
     height: 4.6vh;
     z-index: 1;
@@ -156,7 +156,7 @@ img.logo {
     margin: 6vw;
   }
   .closeicon {
-    background-image: url(x.png);
+    background-image: url(img/x.png);
     width: 7vw;
     height: 5.4vh;
     z-index: 1;
