@@ -17,7 +17,7 @@ label {
   color: #ffffff;
 }
 select {
-  width: 7vw;
+  width: 15vw;
   height: 1.5vw;
 }
 
@@ -201,8 +201,8 @@ a {
     flex-direction: column;
     text-align: center;
     margin: auto;
-    background-color: #333333;
+    /* background-color: #333333;
     box-shadow: 5px 5px 10px #000;
-    border-radius: 10px;
+    border-radius: 10px; */
   }
 }
