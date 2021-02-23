@@ -25,12 +25,11 @@ const options = {
   },
 };
 
+//Set Loading Screen Timer--------------------------------DONE--
 window.addEventListener("load", setTimer);
-
 function setTimer() {
   setTimeout(removeLoadScreen, 22000);
 }
-
 function removeLoadScreen() {
   document.querySelector("#load").classList.add("hidden");
 }
