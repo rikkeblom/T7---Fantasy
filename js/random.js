@@ -182,6 +182,18 @@ function randomPosAdj(adj) {
   a[0].textContent = randPosAdjA;
   a[1].textContent = randPosAdjB;
   a[2].textContent = randPosAdjC;
+  if (randPosAdjA == randPosAdjB) {
+    console.log("new adjectives please");
+    randomPosAdj();
+  } else if (randPosAdjA == randPosAdjC) {
+    console.log("new adjectives please");
+    randomPosAdj();
+  } else if (randPosAdjB == randPosAdjC) {
+    console.log("new adjectives please");
+    randomPosAdj();
+  } else {
+    console.log("You got 3 unique adjectives on first try");
+  }
 }
 
 //random Negative Adjectives---------------------------------
