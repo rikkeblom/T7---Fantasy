@@ -58,7 +58,8 @@ h2 {
 }
 img.logo {
   width: 3em;
-  margin-left: 1.2vw;
+  margin-left: 15px;
+  margin-top: 10px;
 }
 #selected {
   color: var(--color-6);
