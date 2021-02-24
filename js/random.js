@@ -44,15 +44,19 @@ const linkalignment = urlParams.get("alignment");
 if (linkrace == "human") {
   console.log("You chose human");
   document.querySelector(".race").textContent = "human";
+  changeImage();
 } else if (linkrace == "elf") {
   console.log("You chose elf");
   document.querySelector(".race").textContent = "elf";
+  changeImage();
 } else if (linkrace == "dwarf") {
   console.log("You chose dwarf");
   document.querySelector(".race").textContent = "dwarf";
+  changeImage();
 } else if (linkrace == "tiefling") {
   console.log("You chose tiefling");
   document.querySelector(".race").textContent = "tiefling";
+  changeImage();
 } else {
   console.log("You didn't choose so you got random");
   fetch(urlRace, options)
@@ -65,6 +69,7 @@ if (linkrace == "human") {
   function randomRace(race) {
     document.querySelector(".race").textContent =
       race[Math.floor(Math.random() * race.length)].x;
+    changeImage();
   }
 }
 
@@ -351,128 +356,132 @@ function randomBackground(background) {
 
 //change image based on race and gender--------------IN PROGRESS
 //----------------HUMAN---------DONE--
-if (document.querySelector(".race").textContent == "human") {
-  x = window.innerWidth;
-  console.log(`Screenwidth is ${x}`);
-  if (document.querySelector(".gender").textContent == "male") {
-    if (window.innerWidth > 520 == true) {
-      console.log("Insert Full body human MALE image");
-      document.querySelector(".img-avatar").src = "../img/human-boy.svg";
+function changeImage() {
+  if (document.querySelector(".race").textContent == "human") {
+    x = window.innerWidth;
+    console.log(`Screenwidth is ${x}`);
+    if (document.querySelector(".gender").textContent == "male") {
+      if (window.innerWidth > 520 == true) {
+        console.log("Insert Full body human MALE image");
+        document.querySelector(".img-avatar").src = "../img/human-boy.svg";
+      } else {
+        console.log("Insert bust of human MALE image");
+        document.querySelector(".img-avatar").src = "../img/human-boy-bust.svg";
+      }
+    } else if (document.querySelector(".gender").textContent == "female") {
+      if (window.innerWidth > 520 == true) {
+        console.log("Insert Full body human FEMALE image");
+        document.querySelector(".img-avatar").src = "../img/human-girl.svg";
+      } else {
+        console.log("Insert BUST of human FEMALE image");
+        document.querySelector(".img-avatar").src =
+          "../img/human-girl-bust.svg";
+      }
     } else {
-      console.log("Insert bust of human MALE image");
-      document.querySelector(".img-avatar").src = "../img/human-boy-bust.svg";
+      console.log("Insert human NON-BINARY image");
+      if (window.innerWidth > 520 == true) {
+        console.log("Insert Full body human NON-BINARY image");
+        document.querySelector(".img-avatar").src = "../img/human-girl.svg";
+      } else {
+        console.log("Insert bust of human NON-BINARY image");
+        document.querySelector(".img-avatar").src =
+          "../img/human-girl-bust.svg";
+      }
     }
-  } else if (document.querySelector(".gender").textContent == "female") {
-    if (window.innerWidth > 520 == true) {
-      console.log("Insert Full body human FEMALE image");
-      document.querySelector(".img-avatar").src = "../img/human-girl.svg";
+    //----------------DWARF-----------------DONE--
+  } else if (document.querySelector(".race").textContent == "dwarf") {
+    if (document.querySelector(".gender").textContent == "male") {
+      if (window.innerWidth > 520 == true) {
+        console.log("Insert Full body dwarf MALE image");
+        document.querySelector(".img-avatar").src = "../img/dwarf-boy.svg";
+      } else {
+        console.log("Insert BUST of dwarf MALE image");
+        document.querySelector(".img-avatar").src = "../img/dwarf-boy.svg";
+      }
+    } else if (document.querySelector(".gender").textContent == "female") {
+      if (window.innerWidth > 520 == true) {
+        console.log("Insert Full body dwarf FEMALE image");
+        document.querySelector(".img-avatar").src = "../img/dwarf-girl.svg";
+      } else {
+        console.log("Insert BUST of dwarf FEMALE image");
+        document.querySelector(".img-avatar").src = "../img/dwarf-girl.svg";
+      }
     } else {
-      console.log("Insert BUST of human FEMALE image");
-      document.querySelector(".img-avatar").src = "../img/human-girl-bust.svg";
+      if (window.innerWidth > 520 == true) {
+        console.log("Insert Full body dwarf NON-BINARY image");
+        document.querySelector(".img-avatar").src = "../img/dwarf-boy.svg";
+      } else {
+        console.log("Insert bust of dwarf NON-BINARY image");
+        document.querySelector(".img-avatar").src = "../img/dwarf-boy.svg";
+      }
     }
-  } else {
-    console.log("Insert human NON-BINARY image");
-    if (window.innerWidth > 520 == true) {
-      console.log("Insert Full body human NON-BINARY image");
-      document.querySelector(".img-avatar").src = "../img/human-girl.svg";
+    //-------------TIEFLING-----------DONE--
+  } else if (document.querySelector(".race").textContent == "tiefling") {
+    if (document.querySelector(".gender").textContent == "male") {
+      if (window.innerWidth > 520 == true) {
+        console.log("Insert Full body tiefling MALE image");
+        document.querySelector(".img-avatar").src = "../img/tiefling-boy.svg";
+      } else {
+        console.log("Insert BUST of tiefling MALE image");
+        document.querySelector(".img-avatar").src =
+          "../img/tiefling-boy-bust.svg";
+      }
+    } else if (document.querySelector(".gender").textContent == "female") {
+      if (window.innerWidth > 520 == true) {
+        console.log("Insert Full body tiefling FEMALE image");
+        document.querySelector(".img-avatar").src = "../img/tiefling-girl.svg";
+      } else {
+        console.log("Insert BUST of tiefling FEMALE image");
+        document.querySelector(".img-avatar").src =
+          "../img/tiefling-girl-bust.svg";
+      }
     } else {
-      console.log("Insert bust of human NON-BINARY image");
-      document.querySelector(".img-avatar").src = "../img/human-girl-bust.svg";
+      if (window.innerWidth > 520 == true) {
+        console.log("Insert Full body tiefling NON-BINARY image");
+        document.querySelector(".img-avatar").src = "../img/tiefling-boy.svg";
+      } else {
+        console.log("Insert bust of tiefling NON-BINARY image");
+        document.querySelector(".img-avatar").src =
+          "../img/tiefling-boy-bust.svg";
+      }
     }
-  }
-  //----------------DWARF-----------------DONE--
-} else if (document.querySelector(".race").textContent == "dwarf") {
-  if (document.querySelector(".gender").textContent == "male") {
-    if (window.innerWidth > 520 == true) {
-      console.log("Insert Full body dwarf MALE image");
-      document.querySelector(".img-avatar").src = "../img/dwarf-boy.svg";
-    } else {
-      console.log("Insert BUST of dwarf MALE image");
-      document.querySelector(".img-avatar").src = "../img/dwarf-boy.svg";
-    }
-  } else if (document.querySelector(".gender").textContent == "female") {
-    if (window.innerWidth > 520 == true) {
-      console.log("Insert Full body dwarf FEMALE image");
-      document.querySelector(".img-avatar").src = "../img/dwarf-girl.svg";
-    } else {
-      console.log("Insert BUST of dwarf FEMALE image");
-      document.querySelector(".img-avatar").src = "../img/dwarf-girl.svg";
-    }
-  } else {
-    if (window.innerWidth > 520 == true) {
-      console.log("Insert Full body dwarf NON-BINARY image");
-      document.querySelector(".img-avatar").src = "../img/dwarf-boy.svg";
-    } else {
-      console.log("Insert bust of dwarf NON-BINARY image");
-      document.querySelector(".img-avatar").src = "../img/dwarf-boy.svg";
-    }
-  }
-  //-------------TIEFLING-----------DONE--
-} else if (document.querySelector(".race").textContent == "tiefling") {
-  if (document.querySelector(".gender").textContent == "male") {
-    if (window.innerWidth > 520 == true) {
-      console.log("Insert Full body tiefling MALE image");
-      document.querySelector(".img-avatar").src = "../img/tiefling-boy.svg";
-    } else {
-      console.log("Insert BUST of tiefling MALE image");
-      document.querySelector(".img-avatar").src =
-        "../img/tiefling-boy-bust.svg";
-    }
-  } else if (document.querySelector(".gender").textContent == "female") {
-    if (window.innerWidth > 520 == true) {
-      console.log("Insert Full body tiefling FEMALE image");
-      document.querySelector(".img-avatar").src = "../img/tiefling-girl.svg";
-    } else {
-      console.log("Insert BUST of tiefling FEMALE image");
-      document.querySelector(".img-avatar").src =
-        "../img/tiefling-girl-bust.svg";
-    }
-  } else {
-    if (window.innerWidth > 520 == true) {
-      console.log("Insert Full body tiefling NON-BINARY image");
-      document.querySelector(".img-avatar").src = "../img/tiefling-boy.svg";
-    } else {
-      console.log("Insert bust of tiefling NON-BINARY image");
-      document.querySelector(".img-avatar").src =
-        "../img/tiefling-boy-bust.svg";
-    }
-  }
 
-  //--------------ELF----------------
-} else if (document.querySelector(".race").textContent == "elf") {
-  if (document.querySelector(".gender").textContent == "male") {
-    if (window.innerWidth > 520 == true) {
-      console.log("Insert Full body elf MALE image");
-      document.querySelector(".img-avatar").src = "../img/elf-boy.svg";
+    //--------------ELF----------------
+  } else if (document.querySelector(".race").textContent == "elf") {
+    if (document.querySelector(".gender").textContent == "male") {
+      if (window.innerWidth > 520 == true) {
+        console.log("Insert Full body elf MALE image");
+        document.querySelector(".img-avatar").src = "../img/elf-boy.svg";
+      } else {
+        console.log("Insert BUST of elf MALE image");
+        document.querySelector(".img-avatar").src = "../img/elf-boy-bust.svg";
+      }
+    } else if (document.querySelector(".gender").textContent == "female") {
+      if (window.innerWidth > 520 == true) {
+        console.log("Insert Full body elf FEMALE image");
+        document.querySelector(".img-avatar").src = "../img/elf-girl.svg";
+      } else {
+        console.log("Insert BUST of elf FEMALE image");
+        document.querySelector(".img-avatar").src = "../img/elf-girl-bust.svg";
+      }
     } else {
-      console.log("Insert BUST of elf MALE image");
-      document.querySelector(".img-avatar").src = "../img/elf-boy-bust.svg";
+      if (window.innerWidth > 520 == true) {
+        console.log("Insert Full body elf NON-BINARY image");
+        document.querySelector(".img-avatar").src = "../img/elf-girl.svg";
+      } else {
+        console.log("Insert bust of elf NON-BINARY image");
+        document.querySelector(".img-avatar").src = "../img/elf-girl-bust.svg";
+      }
     }
-  } else if (document.querySelector(".gender").textContent == "female") {
-    if (window.innerWidth > 520 == true) {
-      console.log("Insert Full body elf FEMALE image");
-      document.querySelector(".img-avatar").src = "../img/elf-girl.svg";
-    } else {
-      console.log("Insert BUST of elf FEMALE image");
-      document.querySelector(".img-avatar").src = "../img/elf-girl-bust.svg";
-    }
-  } else {
-    if (window.innerWidth > 520 == true) {
-      console.log("Insert Full body elf NON-BINARY image");
-      document.querySelector(".img-avatar").src = "../img/elf-girl.svg";
-    } else {
-      console.log("Insert bust of elf NON-BINARY image");
-      document.querySelector(".img-avatar").src = "../img/elf-girl-bust.svg";
-    }
-  }
 
-  //--------------Back-Up-Category----------
-} else {
-  if (document.querySelector(".gender").textContent == "male") {
-    console.log("Insert -other- MALE image");
-  } else if (document.querySelector(".gender").textContent == "female") {
-    console.log("Insert -other- FEMALE image");
+    //--------------Back-Up-Category----------
   } else {
-    console.log("Insert -other- NON-BINARY image");
+    if (document.querySelector(".gender").textContent == "male") {
+      console.log("Insert -other- MALE image");
+    } else if (document.querySelector(".gender").textContent == "female") {
+      console.log("Insert -other- FEMALE image");
+    } else {
+      console.log("Insert -other- NON-BINARY image");
+    }
   }
 }
