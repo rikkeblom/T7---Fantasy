@@ -1,5 +1,5 @@
 body {
-  background: url(img/bluewoods.png) no-repeat center center fixed;
+  background: url(img/bigbackground_1-100.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -12,7 +12,6 @@ p {
   font-family: var(--general-font);
   color: white;
   font-size: 2vw;
-  max-width: 500px;
   margin-bottom: 1vw;
   margin-left: 4vw;
   margin-right: 4vw;
@@ -26,12 +25,8 @@ p {
   display: flex;
   flex-direction: column;
   text-align: left;
-  height: 50vw;
   width: 50vw;
   margin: 3vw;
-  /* background-color: #333333;
-  box-shadow: 5px 5px 10px #000;
-  border-radius: 10px; */
 }
 .img-avatar {
   position: relative;
@@ -43,6 +38,7 @@ p {
   width: 13vw;
   border: 2px solid #475957;
   margin: 0;
+  margin-top: 4vw;
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
@@ -51,14 +47,13 @@ p {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  align-self: center;
 }
 #button-5 {
   position: relative;
   overflow: hidden;
   cursor: pointer;
   background: var(--background-color);
-  top: 3vw;
-  left: 19vw;
 }
 #button-5 a {
   position: relative;
@@ -112,9 +107,10 @@ p {
 }
 @media only screen and (max-width: 1070px) {
   .wholeform {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   #area_1 {
     justify-self: center;
@@ -128,7 +124,6 @@ p {
     display: flex;
     flex-direction: column;
     text-align: left;
-    height: 75vw;
     width: 70vw;
     margin: 8vw;
     justify-content: center;
@@ -149,9 +144,5 @@ p {
     height: 7vw;
     width: 20vw;
     font-size: 2vw;
-  }
-  #button-5 {
-    top: 2vw;
-    left: 27vw;
   }
 }

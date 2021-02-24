@@ -1,10 +1,9 @@
 body {
-  background-image: url(img/bigbackground_1-100.jpg);
-  position: fixed;
+  background: url(img/bigbackground_1-100.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
 }
 .character {
   background-image: url("img/charactergrey.svg");
