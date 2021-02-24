@@ -7,18 +7,8 @@ const professionalism = [
   "Novice",
 ];
 const urlRace = "https://kea21-7e1e.restdb.io/rest/race";
-const urlMaleName = "https://kea21-7e1e.restdb.io/rest/malename";
-const urlFemaleName = "https://kea21-7e1e.restdb.io/rest/femalename";
-const urlGenderNeutralName =
-  "https://kea21-7e1e.restdb.io/rest/genderneutralname";
-const urlOccupation = "https://kea21-7e1e.restdb.io/rest/occupation";
-const urlBackground = "https://kea21-7e1e.restdb.io/rest/background";
 const urlAlignment = "https://kea21-7e1e.restdb.io/rest/alignment";
-const urlMannerism = "https://kea21-7e1e.restdb.io/rest/mannerism";
-const urlObjective = "https://kea21-7e1e.restdb.io/rest/objective";
-const urlPosAdj = "https://kea21-7e1e.restdb.io/rest/positiveadjective";
-const urlNegAdj = "https://kea21-7e1e.restdb.io/rest/negativeadjective";
-const urlLastname = "https://kea21-7e1e.restdb.io/rest/lastname";
+const urlRandom = "https://kea21-7e1e.restdb.io/rest/character";
 const options = {
   headers: {
     "x-apikey": "602f9e445ad3610fb5bb63d5",
@@ -122,7 +112,7 @@ if (linkalignment == "lawful-good") {
 }
 
 //random occupation-----------------------DONE--
-fetch(urlOccupation, options)
+fetch(urlRandom, options)
   .then((response) => {
     return response.json();
   })
@@ -132,13 +122,13 @@ fetch(urlOccupation, options)
 
 function randomOccupation(occupation) {
   const randOccupation =
-    occupation[Math.floor(Math.random() * occupation.length)].x;
+    occupation[Math.floor(Math.random() * occupation.length)].occupation;
   console.log(randOccupation);
   document.querySelector(".occupation").textContent = randOccupation;
 }
 
 //random objective-----------------------DONE--
-fetch(urlObjective, options)
+fetch(urlRandom, options)
   .then((response) => {
     return response.json();
   })
@@ -148,13 +138,13 @@ fetch(urlObjective, options)
 
 function randomObjective(objective) {
   const randObjective =
-    objective[Math.floor(Math.random() * objective.length)].x;
+    objective[Math.floor(Math.random() * objective.length)].objective;
   console.log(randObjective);
   document.querySelector(".objective").textContent = randObjective;
 }
 
 //random mannerism----------------------DONE---
-fetch(urlMannerism, options)
+fetch(urlRandom, options)
   .then((response) => {
     return response.json();
   })
@@ -164,13 +154,13 @@ fetch(urlMannerism, options)
 
 function randomMannerism(mannerism) {
   const randMannerism =
-    mannerism[Math.floor(Math.random() * mannerism.length)].x;
+    mannerism[Math.floor(Math.random() * mannerism.length)].mannerism;
   console.log(randMannerism);
   document.querySelector(".mannerism").textContent = randMannerism;
 }
 
 //random Possitive Adjectives---------------------DONE--
-fetch(urlPosAdj, options)
+fetch(urlRandom, options)
   .then((response) => {
     return response.json();
   })
@@ -179,9 +169,12 @@ fetch(urlPosAdj, options)
   });
 
 function randomPosAdj(adj) {
-  const randPosAdjA = adj[Math.floor(Math.random() * adj.length)].x;
-  const randPosAdjB = adj[Math.floor(Math.random() * adj.length)].x;
-  const randPosAdjC = adj[Math.floor(Math.random() * adj.length)].x;
+  const randPosAdjA =
+    adj[Math.floor(Math.random() * adj.length)].positiveadjective;
+  const randPosAdjB =
+    adj[Math.floor(Math.random() * adj.length)].positiveadjective;
+  const randPosAdjC =
+    adj[Math.floor(Math.random() * adj.length)].positiveadjective;
   console.log(`they are ${randPosAdjA}, ${randPosAdjB} and ${randPosAdjC}`);
   const a = document.querySelectorAll(".positiveAdjective");
   a[0].textContent = randPosAdjA;
@@ -189,7 +182,7 @@ function randomPosAdj(adj) {
   a[2].textContent = randPosAdjC;
   if (randPosAdjA == randPosAdjB) {
     console.log("new adjectives please");
-    fetch(urlPosAdj, options)
+    fetch(urlRandom, options)
       .then((response) => {
         return response.json();
       })
@@ -198,7 +191,7 @@ function randomPosAdj(adj) {
       });
   } else if (randPosAdjA == randPosAdjC) {
     console.log("new adjectives please");
-    fetch(urlPosAdj, options)
+    fetch(urlRandom, options)
       .then((response) => {
         return response.json();
       })
@@ -207,7 +200,7 @@ function randomPosAdj(adj) {
       });
   } else if (randPosAdjB == randPosAdjC) {
     console.log("new adjectives please");
-    fetch(urlPosAdj, options)
+    fetch(urlRandom, options)
       .then((response) => {
         return response.json();
       })
@@ -220,7 +213,7 @@ function randomPosAdj(adj) {
 }
 
 //random Negative Adjectives---------------------------------
-fetch(urlNegAdj, options)
+fetch(urlRandom, options)
   .then((response) => {
     return response.json();
   })
@@ -230,7 +223,7 @@ fetch(urlNegAdj, options)
 
 function randomNegAdj(adj) {
   document.querySelector(".negativeAdjective").textContent =
-    adj[Math.floor(Math.random() * adj.length)].x;
+    adj[Math.floor(Math.random() * adj.length)].negativeadjective;
 }
 
 //get either the gender you picked or a random --DONE--
@@ -261,13 +254,13 @@ if (linkgender === "female") {
 
 function randomMaleName(name) {
   console.log("male name");
-  fetch(urlMaleName, options)
+  fetch(urlRandom, options)
     .then((response) => {
       return response.json();
     })
     .then((name) => {
       const a = document.querySelectorAll(".name");
-      const b = name[Math.floor(Math.random() * name.length)].x;
+      const b = name[Math.floor(Math.random() * name.length)].malename;
       a[0].textContent = b;
       a[1].textContent = b;
       a[2].textContent = b;
@@ -282,13 +275,13 @@ function randomMaleName(name) {
 
 function randomNonBinaryName(name) {
   console.log("non-binary name");
-  fetch(urlGenderNeutralName, options)
+  fetch(urlRandom, options)
     .then((response) => {
       return response.json();
     })
     .then((name) => {
       const a = document.querySelectorAll(".name");
-      const b = name[Math.floor(Math.random() * name.length)].x;
+      const b = name[Math.floor(Math.random() * name.length)].non - binaryname;
       a[0].textContent = b;
       a[1].textContent = b;
       a[2].textContent = b;
@@ -304,13 +297,13 @@ function randomNonBinaryName(name) {
 
 function randomFemaleName(name) {
   console.log("female name");
-  fetch(urlFemaleName, options)
+  fetch(urlRandom, options)
     .then((response) => {
       return response.json();
     })
     .then((name) => {
       const a = document.querySelectorAll(".name");
-      const b = name[Math.floor(Math.random() * name.length)].x;
+      const b = name[Math.floor(Math.random() * name.length)].femalename;
       a[0].textContent = b;
       a[1].textContent = b;
       a[2].textContent = b;
@@ -324,7 +317,7 @@ function randomFemaleName(name) {
 }
 
 //random Lastname ------------DONE----
-fetch(urlLastname, options)
+fetch(urlRandom, options)
   .then((response) => {
     return response.json();
   })
@@ -333,13 +326,13 @@ fetch(urlLastname, options)
   });
 
 function randomLastname(name) {
-  const randName = name[Math.floor(Math.random() * name.length)].x;
+  const randName = name[Math.floor(Math.random() * name.length)].lastname;
   console.log(randName);
   document.querySelector(".lastname").textContent = randName;
 }
 
 //random background ------------DONE----
-fetch(urlBackground, options)
+fetch(urlRandom, options)
   .then((response) => {
     return response.json();
   })
@@ -349,7 +342,7 @@ fetch(urlBackground, options)
 
 function randomBackground(background) {
   const randBackground =
-    background[Math.floor(Math.random() * background.length)].x;
+    background[Math.floor(Math.random() * background.length)].background;
   console.log(randBackground);
   document.querySelector(".background").textContent = randBackground;
 }
