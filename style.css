@@ -120,6 +120,8 @@ img.logo {
   height: 0.5vw;
   background-color: #ffffff;
   flex-grow: 1;
+  margin-left: var(--text-divider-gap);
+  margin-right: var(--text-divider-gap);
 }
 
 @media screen and (max-width: 800px) {

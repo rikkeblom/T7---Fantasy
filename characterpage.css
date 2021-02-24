@@ -1,5 +1,5 @@
 body {
-  background: url(img/bluewoods.png) no-repeat center center fixed;
+  background: url(img/bigbackground_1-100.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -27,9 +27,6 @@ p {
   text-align: left;
   width: 50vw;
   margin: 3vw;
-  /* background-color: #333333;
-  box-shadow: 5px 5px 10px #000;
-  border-radius: 10px; */
 }
 .img-avatar {
   position: relative;
@@ -41,6 +38,7 @@ p {
   width: 13vw;
   border: 2px solid #475957;
   margin: 0;
+  margin-top: 4vw;
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
