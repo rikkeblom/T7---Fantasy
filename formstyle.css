@@ -1,10 +1,9 @@
 body {
-  background: url(bigbackground_1-100.jpg);
-  position: fixed;
+  background: url(bigbackground_1-100.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
 }
 #wholeform {
   display: grid;
@@ -17,7 +16,7 @@ label {
   color: #ffffff;
 }
 select {
-  width: 15vw;
+  width: 12vw;
   height: 1.5vw;
 }
 
@@ -174,9 +173,6 @@ a {
     flex-direction: column;
     text-align: center;
     margin: auto;
-    /* background-color: #333333;
-    box-shadow: 5px 5px 10px #000;
-    border-radius: 10px; */
   }
 
   .button {
@@ -201,8 +197,5 @@ a {
     flex-direction: column;
     text-align: center;
     margin: auto;
-    /* background-color: #333333;
-    box-shadow: 5px 5px 10px #000;
-    border-radius: 10px; */
   }
 }
