@@ -86,7 +86,8 @@ img.logo {
 }
 .burger {
   display: none;
-  padding: 0.5rem;
+  margin-left: 15px;
+  margin-top: 10px;
   cursor: pointer;
 }
 .line {
@@ -157,14 +158,15 @@ img.logo {
 
   .burgericon {
     background-image: url(img/hamburger.png);
-    width: 7vw;
+    width: 30px;
     height: 4.6vh;
     z-index: 1;
     background-repeat: no-repeat;
     background-size: 100%;
-    margin: 0.2rem;
+    margin-right: 15px;
+    margin-top: 10px;
     display: block;
-    margin: 6vw;
+  
   }
   .closeicon {
     background-image: url(img/x.png);
