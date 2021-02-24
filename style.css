@@ -60,6 +60,14 @@ img.logo {
   width: 3em;
   margin-left: 1.2vw;
 }
+#selected {
+  color: var(--color-6);
+  text-shadow: 0vw 0vw 1vw #739fa4;
+}
+#selected:hover {
+  color: var(--color-6);
+  text-shadow: 0vw 0vw 1vw #739fa4;
+}
 .nav-links {
   display: flex;
   width: 100%;
