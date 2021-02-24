@@ -5,6 +5,11 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+
+* {
+  margin: 0;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -13,40 +18,49 @@ main {
 
 h3 {
   font-family: var(--heading-font);
-  max-width: 500px;
   font-size: 4vw;
   font-style: italic;
   color: white;
+  margin-left: 5vw;
+  margin-right: 5vw;
   padding-top: 5vw;
   margin-bottom: 1vw;
 }
 
 p {
   font-family: var(--general-font);
-  max-width: 500px;
   color: white;
   font-size: 2vw;
-  margin-left: 4vw;
-  margin-right: 4vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+h4 {
+  font-family: var(--general-font);
+  color: white;
+  font-size: 2.5vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 
 .abouttitle {
-  max-width: 800px;
+  max-width: 2000px;
 }
 
 .button {
   height: 4vw;
   width: 13vw;
   border: 2px solid #475957;
-  margin: 0;
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 1.5vw;
   letter-spacing: 1.5px;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  margin-top: 7vw;
 }
 #button-5 {
   position: absolute;
@@ -80,4 +94,8 @@ p {
 
 #button-5:hover a {
   color: #ffffff;
+}
+
+#begging {
+  margin-top: 8vw;
 }
