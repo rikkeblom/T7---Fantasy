@@ -210,7 +210,7 @@ function randomPosAdj(adj) {
         randomPosAdj(data);
       });
   } else {
-    console.log("You got 3 unique adjectives on first try");
+    console.log("You got 3 unique adjectives");
   }
 }
 
@@ -350,34 +350,34 @@ function randomBackground(background) {
 }
 
 //change image based on race and gender--------------IN PROGRESS
-//----------------HUMAN----------Ready for images-
+//----------------HUMAN---------DONE--
 if (document.querySelector(".race").textContent == "human") {
   x = window.innerWidth;
   console.log(`Screenwidth is ${x}`);
   if (document.querySelector(".gender").textContent == "male") {
     if (window.innerWidth > 520 == true) {
       console.log("Insert Full body human MALE image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/human-boy.svg";
     } else {
       console.log("Insert bust of human MALE image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/human-boy-bust.svg";
     }
   } else if (document.querySelector(".gender").textContent == "female") {
     if (window.innerWidth > 520 == true) {
       console.log("Insert Full body human FEMALE image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/human-girl.svg";
     } else {
       console.log("Insert BUST of human FEMALE image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/human-girl-bust.svg";
     }
   } else {
     console.log("Insert human NON-BINARY image");
     if (window.innerWidth > 520 == true) {
       console.log("Insert Full body human NON-BINARY image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/human-girl.svg";
     } else {
       console.log("Insert bust of human NON-BINARY image");
-      // document.querySelector(".img-avatar").src = "";
+      document.querySelector(".img-avatar").src = "../img/human-girl-bust.svg";
     }
   }
   //----------------DWARF-----------------DONE--
