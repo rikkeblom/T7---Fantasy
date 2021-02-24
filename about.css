@@ -1,5 +1,5 @@
 body {
-  background: url(img/bluewoods.png) no-repeat center center fixed;
+  background: url(img/bigbackground_1-100.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -21,8 +21,8 @@ h3 {
   font-size: 4vw;
   font-style: italic;
   color: white;
-  margin-left: 5vw;
-  margin-right: 5vw;
+  margin-left: 7vw;
+  margin-right: 7vw;
   padding-top: 5vw;
   margin-bottom: 1vw;
 }
@@ -31,20 +31,21 @@ p {
   font-family: var(--general-font);
   color: white;
   font-size: 2vw;
-  margin-left: 5vw;
-  margin-right: 5vw;
+  margin-left: 7vw;
+  margin-right: 7vw;
 }
 
 h4 {
   font-family: var(--general-font);
   color: white;
   font-size: 2.5vw;
-  margin-left: 5vw;
-  margin-right: 5vw;
+  margin-left: 7vw;
+  margin-right: 7vw;
 }
 
 .abouttitle {
-  max-width: 2000px;
+  margin-left: 7vw;
+  margin-right: 7vw;
 }
 
 .button {
@@ -98,4 +99,24 @@ h4 {
 
 #begging {
   margin-top: 8vw;
+}
+
+.text-divider {
+  /* display: flex; */
+  margin-right: 7vw;
+  margin-left: 7vw;
+  padding-bottom: 2vw;
+  align-items: center;
+  color: #ffffff;
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  font-size: 3vw;
+  --text-divider-gap: 2vw;
+}
+.text-divider::before,
+.text-divider::after {
+  content: "";
+  height: 0.5vw;
+  background-color: #ffffff;
+  flex-grow: 1;
 }
