@@ -48,8 +48,13 @@ h4 {
   margin-left: 7vw;
   margin-right: 7vw;
 }
+.aboutflex {
+  display: flex;
+  flex-direction: column;
+}
 
 .button {
+  display: inline-flex;
   height: 4vw;
   width: 13vw;
   border: 2px solid #475957;
@@ -58,15 +63,16 @@ h4 {
   text-decoration: none;
   font-size: 1.5vw;
   letter-spacing: 1.5px;
-  position: absolute;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
   margin-top: 7vw;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  justify-self: center;
+  text-align: center;
 }
 
 #button-5 {
-  position: absolute;
+  position: relative;
   overflow: hidden;
   cursor: pointer;
   background: var(--background-color);
