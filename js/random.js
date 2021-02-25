@@ -39,6 +39,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const linkrace = urlParams.get("race");
 const linkgender = urlParams.get("gender");
 const linkalignment = urlParams.get("alignment");
+const linkoccupation = urlParams.get("occupation");
 
 //get either the RACE you picked or a random race -- DONE --
 if (linkrace == "human") {
@@ -122,21 +123,44 @@ if (linkalignment == "lawful-good") {
 }
 
 //random occupation-----------------------DONE--
-fetch(urlOccupation, options)
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    randomOccupation(data);
-  });
+if (linkoccupation == "ranger") {
+  document.querySelector(".occupation").textContent = "ranger";
+} else if (linkoccupation == "barbarian") {
+  document.querySelector(".occupation").textContent = "barbarian";
+} else if (linkoccupation == "artificer") {
+  document.querySelector(".occupation").textContent = "artificer";
+} else if (linkoccupation == "sorcerer") {
+  document.querySelector(".occupation").textContent = "sorcerer";
+} else if (linkoccupation == "wizard") {
+  document.querySelector(".occupation").textContent = "wizard";
+} else if (linkoccupation == "bard") {
+  document.querySelector(".occupation").textContent = "bard";
+} else if (linkoccupation == "cleric") {
+  document.querySelector(".occupation").textContent = "cleric";
+} else if (linkoccupation == "monk") {
+  document.querySelector(".occupation").textContent = "monk";
+} else if (linkoccupation == "druid") {
+  document.querySelector(".occupation").textContent = "druid";
+} else if (linkoccupation == "fighter") {
+  document.querySelector(".occupation").textContent = "fighter";
+} else if (linkoccupation == "warlock") {
+  document.querySelector(".occupation").textContent = "warlock";
+} else {
+  fetch(urlOccupation, options)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      randomOccupation(data);
+    });
 
-function randomOccupation(occupation) {
-  const randOccupation =
-    occupation[Math.floor(Math.random() * occupation.length)].x;
-  console.log(randOccupation);
-  document.querySelector(".occupation").textContent = randOccupation;
+  function randomOccupation(occupation) {
+    const randOccupation =
+      occupation[Math.floor(Math.random() * occupation.length)].x;
+    console.log(randOccupation);
+    document.querySelector(".occupation").textContent = randOccupation;
+  }
 }
-
 //random objective-----------------------DONE--
 fetch(urlObjective, options)
   .then((response) => {
