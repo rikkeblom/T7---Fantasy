@@ -45,19 +45,19 @@ const linkoccupation = urlParams.get("occupation");
 if (linkrace == "human") {
   console.log("You chose human");
   document.querySelector(".race").textContent = "human";
-  changeImage();
+  chooseGender();
 } else if (linkrace == "elf") {
   console.log("You chose elf");
   document.querySelector(".race").textContent = "elf";
-  changeImage();
+  chooseGender();
 } else if (linkrace == "dwarf") {
   console.log("You chose dwarf");
   document.querySelector(".race").textContent = "dwarf";
-  changeImage();
+  chooseGender();
 } else if (linkrace == "tiefling") {
   console.log("You chose tiefling");
   document.querySelector(".race").textContent = "tiefling";
-  changeImage();
+  chooseGender();
 } else {
   console.log("You didn't choose so you got random");
   fetch(urlRace, options)
@@ -70,7 +70,7 @@ if (linkrace == "human") {
   function randomRace(race) {
     document.querySelector(".race").textContent =
       race[Math.floor(Math.random() * race.length)].x;
-    changeImage();
+    chooseGender();
   }
 }
 
@@ -258,28 +258,36 @@ function randomNegAdj(adj) {
 }
 
 //get either the gender you picked or a random --DONE--
-if (linkgender === "female") {
-  console.log("You chose female");
-  document.querySelector(".gender").textContent = "female";
-  randomFemaleName();
-} else if (linkgender === "male") {
-  console.log("You chose male");
-  document.querySelector(".gender").textContent = "male";
-  randomMaleName();
-} else if (linkgender === "non-binary") {
-  console.log("You chose non-binary");
-  document.querySelector(".gender").textContent = "non-binary";
-  randomNonBinaryName();
-} else {
-  const genderplace = document.querySelector(".gender");
-  const charactergender = gender[Math.floor(Math.random() * gender.length)];
-  genderplace.textContent = charactergender;
-  if (charactergender == "female") {
+function chooseGender() {
+  if (linkgender === "female") {
+    console.log("You chose female");
+    document.querySelector(".gender").textContent = "female";
     randomFemaleName();
-  } else if (charactergender == "male") {
+    changeImage();
+  } else if (linkgender === "male") {
+    console.log("You chose male");
+    document.querySelector(".gender").textContent = "male";
     randomMaleName();
-  } else {
+    changeImage();
+  } else if (linkgender === "non-binary") {
+    console.log("You chose non-binary");
+    document.querySelector(".gender").textContent = "non-binary";
     randomNonBinaryName();
+    changeImage();
+  } else {
+    const genderplace = document.querySelector(".gender");
+    const charactergender = gender[Math.floor(Math.random() * gender.length)];
+    genderplace.textContent = charactergender;
+    if (charactergender == "female") {
+      randomFemaleName();
+      changeImage();
+    } else if (charactergender == "male") {
+      randomMaleName();
+      changeImage();
+    } else {
+      randomNonBinaryName();
+      changeImage();
+    }
   }
 }
 
